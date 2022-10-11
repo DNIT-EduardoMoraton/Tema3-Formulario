@@ -8,11 +8,11 @@
         Title="Formulario" Height="450" Width="800">
     <DockPanel>
         <DockPanel LastChildFill="False" DockPanel.Dock="Bottom">
-            <TextBlock>Eduardo Moratón</TextBlock>
-            <Button>Aceptar</Button>
-            <Button>Cancelar</Button>
+            <TextBlock Margin="5" FontStyle="Italic">Eduardo Moratón</TextBlock>
+            <Button DockPanel.Dock="Right" Margin="5">Aceptar</Button>
+            <Button DockPanel.Dock="Right" Margin="5">Cancelar</Button>
         </DockPanel>
-        <TextBlock DockPanel.Dock="Top" TextAlignment="Center">Formulario</TextBlock>
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="36" FontWeight="Bold">Formulario</TextBlock>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.5*"></ColumnDefinition>
@@ -20,6 +20,9 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Row="0" Grid.Column="0">
                 <Border BorderBrush="Black" BorderThickness="3" CornerRadius="10" Background="Aqua" Margin="10">
+                    <Border.Effect>
+                        <DropShadowEffect/>
+                    </Border.Effect>
                     <StackPanel Margin="2">
                         <DockPanel Margin="5">
                             <TextBlock DockPanel.Dock="Left" Width="60">Nombre:</TextBlock>
@@ -39,10 +42,34 @@
                     </StackPanel>
                     
                 </Border>
-
+                <Border BorderBrush="Black" BorderThickness="4" CornerRadius="10" Background="LightYellow" Margin="10">
+                    <Border.Effect>
+                        <DropShadowEffect/>
+                    </Border.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <GroupBox BorderThickness="2" BorderBrush="Blue" Margin="5" Padding="5,5,80,5" Header="Aficiones">
+                            <StackPanel>
+                                <CheckBox>Hacer deporte</CheckBox>
+                                <CheckBox>Viajar</CheckBox>
+                                <CheckBox>Ver series</CheckBox>
+                                <CheckBox>Leer comics</CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox BorderThickness="2" BorderBrush="Blue" Margin="5" Padding="5,5,80,5" Header="Estado civil">
+                            <StackPanel>
+                                <RadioButton GroupName="estadoCivil" IsChecked="True">Soltero</RadioButton>
+                                <RadioButton GroupName="estadoCivil">Casado</RadioButton>
+                                <RadioButton GroupName="estadoCivil">Divorciado</RadioButton>
+                                <RadioButton GroupName="estadoCivil">Viudo</RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Border>
                 
             </StackPanel>
-            
+            <Image Grid.Row="0" Grid.Column="1" Source="assets/foto.jpg" Stretch="Fill" >
+                
+            </Image>
         </Grid>
         
         
