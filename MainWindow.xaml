@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tema3_Formulario"
         mc:Ignorable="d"
-        Title="Formulario" Height="450" Width="800">
+        Title="Formulario" Height="450" Width="800" Icon="assets/1486503780-board-buffer-clip-poll-survey-form-clipboard_81262.ico">
     <DockPanel>
         <DockPanel LastChildFill="False" DockPanel.Dock="Bottom">
             <TextBlock Margin="5" FontStyle="Italic">Eduardo Moratón</TextBlock>
-            <Button DockPanel.Dock="Right" Margin="5">Aceptar</Button>
             <Button DockPanel.Dock="Right" Margin="5">Cancelar</Button>
+            <Button DockPanel.Dock="Right" Margin="5">Aceptar</Button>
         </DockPanel>
         <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="36" FontWeight="Bold">Formulario</TextBlock>
         <Grid>
@@ -26,17 +26,17 @@
                     <StackPanel Margin="2">
                         <DockPanel Margin="5">
                             <TextBlock DockPanel.Dock="Left" Width="60">Nombre:</TextBlock>
-                            <TextBlock DockPanel.Dock="Right">✔️</TextBlock>
+                            <Image DockPanel.Dock="Right" Source="assets/info.png" Width="20" ToolTip="No mas de 100 Caracteres"></Image>
                             <TextBox></TextBox>
                         </DockPanel>
                         <DockPanel Margin="5">
                             <TextBlock DockPanel.Dock="Left" Width="60">Edad:</TextBlock>
-                            <TextBlock DockPanel.Dock="Right">✔️</TextBlock>
+                            <Image DockPanel.Dock="Right" Source="assets/info.png" Width="20" ToolTip="Numero entre 0 y 100"></Image>
                             <TextBox></TextBox>
                         </DockPanel>
                         <DockPanel Margin="5">
                             <TextBlock DockPanel.Dock="Left" Width="60">Direccion:</TextBlock>
-                            <TextBlock DockPanel.Dock="Right">✔️</TextBlock>
+                            <Image DockPanel.Dock="Right" Source="assets/info.png" Width="20" ToolTip="Codigo postal"></Image>
                             <TextBox></TextBox>
                         </DockPanel>
                     </StackPanel>
