@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:Tema3_Formulario"
         mc:Ignorable="d"
         Title="Formulario" Height="450" Width="800" Icon="assets/1486503780-board-buffer-clip-poll-survey-form-clipboard_81262.ico">
-    <DockPanel>
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Border}" x:Key="leftPanels">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="10"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect></DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+
+            <DockPanel>
         <DockPanel LastChildFill="False" DockPanel.Dock="Bottom">
             <TextBlock Margin="5" FontStyle="Italic">Eduardo Moratón</TextBlock>
             <Button DockPanel.Dock="Right" Margin="5">Cancelar</Button>
@@ -19,10 +36,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Row="0" Grid.Column="0">
-                <Border BorderBrush="Black" BorderThickness="3" CornerRadius="10" Background="Aqua" Margin="10">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
+                <Border Background="Aqua" Style="{StaticResource leftPanels}">
                     <StackPanel Margin="2">
                         <DockPanel Margin="5">
                             <TextBlock DockPanel.Dock="Left" Width="60">Nombre:</TextBlock>
@@ -42,7 +56,7 @@
                     </StackPanel>
                     
                 </Border>
-                <Border BorderBrush="Black" BorderThickness="4" CornerRadius="10" Background="LightYellow" Margin="10">
+                <Border Style="{StaticResource leftPanels}" Background="LightYellow">
                     <Border.Effect>
                         <DropShadowEffect/>
                     </Border.Effect>
