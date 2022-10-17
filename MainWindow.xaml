@@ -19,6 +19,12 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style TargetType="{x:Type TextBlock}" x:Key="mainTitle">
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
     </Window.Resources>
 
 
@@ -29,7 +35,7 @@
             <Button DockPanel.Dock="Right" Margin="5">Cancelar</Button>
             <Button DockPanel.Dock="Right" Margin="5">Aceptar</Button>
         </DockPanel>
-        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="36" FontWeight="Bold">Formulario</TextBlock>
+        <TextBlock DockPanel.Dock="Top" Style="{StaticResource mainTitle}">Formulario</TextBlock>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.5*"></ColumnDefinition>
